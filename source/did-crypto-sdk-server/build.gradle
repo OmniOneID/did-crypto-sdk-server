@@ -1,0 +1,26 @@
+plugins {
+	id 'java'
+}
+
+group = 'org.omnione.did'
+
+java {
+	sourceCompatibility = '17'
+}
+
+jar {
+    archiveBaseName.set('did-crypto-sdk-server')
+    archiveVersion.set('1.0.0')
+    archiveClassifier.set('') 
+}
+
+
+repositories {
+	mavenCentral()		
+}
+
+dependencies {
+    implementation 'org.bouncycastle:bcprov-jdk18on:1.78.1'
+}
+
+
