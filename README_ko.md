@@ -16,10 +16,10 @@ did-crypto-sdk-server
 ├── RELEASE-PROCESS.md
 ├── SECURITY.md
 ├── docs
-│    └── api
+│   └── api
 │       ├── CRYPTO_SDK_SERVER_API.md
 │       ├── CRYPTO_SDK_SERVER_API_ko.md
-│       └── CRYPTOSDKError.md
+│       └── CryptoSDKError.md
 └── source
     └── did-crypto-sdk-server
         ├── README.md

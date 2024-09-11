@@ -61,10 +61,10 @@ dependencies {
 ## API Specification
 | Classification | API Document Link |
 |------|----------------------------|
-| CryptoUtils | [Crypto SDK Server API - CryptoUtils ](docs/CRYPTO_SDK-SERVER_API.md) |
-| DigestUtils | [Crypto SDK Server API - DigestUtils ](docs/CRYPTO_SDK-SERVER_API.md) |
-| MultiBaseUtils  | [Crypto SDK Server API - MultiBaseUtils](docs/CRYPTO_SDK-SERVER_API.md)  |
-| SignatureUtils | [Crypto SDK Server API - SignatureUtils](docs/CRYPTO_SDK-SERVER_API.md)  |
+| CryptoUtils | [Crypto SDK Server API - CryptoUtils ](/docs/api/CRYPTO_SDK-SERVER_API.md#11-cryptoutils) |
+| DigestUtils | [Crypto SDK Server API - DigestUtils ](/docs/api/CRYPTO_SDK-SERVER_API.md#12-digestutils) |
+| MultiBaseUtils  | [Crypto SDK Server API - MultiBaseUtils](/docs/api/CRYPTO_SDK-SERVER_API.md#13-multibaseutils)  |
+| SignatureUtils | [Crypto SDK Server API - SignatureUtils](/docs/api/CRYPTO_SDK-SERVER_API.md#14-signatureutils)  |
 
 ### CryptoUtils
 CryptoUtils provides features including ECC key pair generation and public key compression/decompression, nonce and salt generation, password-based key generation via PBKDF2, AES encryption/decryption, and SharedSecret generation.
