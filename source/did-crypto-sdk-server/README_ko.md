@@ -61,10 +61,10 @@ dependencies {
 ## API 규격서
 | 구분 | API 문서 Link |
 |------|----------------------------|
-| CryptoUtils | [Crypto SDK Server API - CryptoUtils ](docs/CRYPTO_SDK-SERVER_API_ko.md) |
-| DigestUtils | [Crypto SDK Server API - DigestUtils ](docs/CRYPTO_SDK-SERVER_API_ko.md) |
-| MultiBaseUtils  | [Crypto SDK Server API - MultiBaseUtils](docs/CRYPTO_SDK-SERVER_API_ko.md)  |
-| SignatureUtils | [Crypto SDK Server API - SignatureUtils](docs/CRYPTO_SDK-SERVER_API_ko.md)  |
+| CryptoUtils | [Crypto SDK Server API - CryptoUtils ](/docs/api/CRYPTO_SDK-SERVER_API_ko.md#11-cryptoutils) |
+| DigestUtils | [Crypto SDK Server API - DigestUtils ](/docs/api/CRYPTO_SDK-SERVER_API_ko.md#12-digestutils) |
+| MultiBaseUtils  | [Crypto SDK Server API - MultiBaseUtils](/docs/api/CRYPTO_SDK-SERVER_API_ko.md#13-multibaseutils)  |
+| SignatureUtils | [Crypto SDK Server API - SignatureUtils](/docs/api/CRYPTO_SDK-SERVER_API_ko.md#14-signatureutils)  |
 
 ### CryptoUtils
 CryptoUtils는 ECC 키 쌍 생성 및 공개키 압축/해제, nonce 및 salt 생성, PBKDF2를 통한 패스워드 기반 키 생성, AES 암호화/복호화, 그리고 SharedSecret 생성을 포함한 기능을 제공한다.<br>주요 기능은 다음과 같다:
