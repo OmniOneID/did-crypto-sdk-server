@@ -916,7 +916,7 @@ public enum SymmetricPaddingType {
 
 ### Usage
 ```java
-String symmetricPaddingTypeStr = "256 bits";
+String symmetricPaddingTypeStr = "PKCS5Padding";
 
 SymmetricPaddingType symmetricPaddingType = SymmetricPaddingType.fromString(symmetricPaddingTypeStr);
 ```
