@@ -892,16 +892,16 @@ EncryptionMode encryptionMode = EncryptionMode.fromString(encryptionModeStr);
 
 ```java
 public enum SymmetricKeySize {
-  Size128("128 bits"),
-  Size256("256 bits");
+  Size128(128),
+  Size256(256);
 }
 ```
 
 ### Usage
 ```java
-String symmetricKeySizeStr = "256 bits";
+int symmetricKeySizeValue = 256;
 
-SymmetricKeySize symmetricKeySize = SymmetricKeySize.fromString(symmetricKeySizeStr);
+SymmetricKeySize symmetricKeySize = SymmetricKeySize.fromString(symmetricKeySizeValue);
 ```
 
 ## 2.6 SymmetricPaddingType
