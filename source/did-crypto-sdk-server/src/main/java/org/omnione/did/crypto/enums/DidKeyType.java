@@ -22,9 +22,9 @@ public enum DidKeyType {
 		return rawValue;
 	}
 
-	public static DidKeyType fromString(String rawlavue) {
+	public static DidKeyType fromString(String rawValue) {
 		for (DidKeyType b : DidKeyType.values()) {
-			if (b.rawValue.equalsIgnoreCase(rawlavue)) {
+			if (b.rawValue.equalsIgnoreCase(rawValue)) {
 				return b;
 			}
 		}
@@ -33,13 +33,5 @@ public enum DidKeyType {
 
 	public static EnumSet<DidKeyType> all() {
 		return EnumSet.allOf(DidKeyType.class);
-	}
-
-	public static void main(String[] args) {
-		EnumSet<DidKeyType> didKeyTypeEnums = EnumSet.of(DidKeyType.RSA_VERIFICATION_KEY_2018);
-
-		for (DidKeyType didKeyType : didKeyTypeEnums) {
-			System.out.println(didKeyType + ": " + didKeyType.getRawValue());
-		}
 	}
 }
