@@ -9,7 +9,7 @@ did-crypto-sdk-server
 ├── CLA.md
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
-├── LICENSE.dependencies.md
+├── LICENSE-dependencies.md
 ├── MAINTAINERS.md
 ├── README.md
 ├── README_ko.md
@@ -45,10 +45,45 @@ did-crypto-sdk-server
 | CHANGELOG.md            | Version-specific changes in the project         |
 | CODE_OF_CONDUCT.md      | Code of conduct for contributors                |
 | CONTRIBUTING.md         | Contribution guidelines and procedures          |
-| LICENSE.dependencies.md | Licenses for the project’s dependency libraries |
+| LICENSE-dependencies.md | Licenses for the project’s dependency libraries |
 | MAINTAINERS.md          | General guidelines for maintaining              |
 | RELEASE-PROCESS.md      | Release process                                 |
 | SECURITY.md             | Security policies and vulnerability reporting   |
+
+## Build Method
+: Create a JAR file based on the build.gradle file of this SDK project.
+1. Open the `build.gradle` file of your project and add a task from the configuration file as shown below.
+
+```groovy
+plugins {
+    id 'java'
+}
+
+group = 'org.omnione.did'
+
+java {
+    sourceCompatibility = '17'
+}
+
+jar {
+    archiveBaseName.set('did-crypto-sdk-server') 
+    archiveVersion.set('1.0.0')
+    archiveClassifier.set('') 
+}
+
+repositories {
+    mavenCentral()    
+}
+
+dependencies {
+    implementation 'org.bouncycastle:bcprov-jdk18on:1.78.1'
+}
+```
+
+2. Open the `Gradle` tab in IDE and run the project's `Task > Build > Clean and Build` task, or type `./gradlew clean & build` in a terminal.
+3. Once the execution is complete, the `did-crypto-sdk-server-1.0.0.jar` file will be generated in the `{projetPath}/build/libs/` folder.
+
+<br>
 
 ## Libraries
 

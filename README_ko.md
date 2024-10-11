@@ -9,7 +9,7 @@ did-crypto-sdk-server
 ├── CLA.md
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
-├── LICENSE.dependencies.md
+├── LICENSE-dependencies.md
 ├── MAINTAINERS.md
 ├── README.md
 ├── README_ko.md
@@ -45,10 +45,45 @@ did-crypto-sdk-server
 | CHANGELOG.md| 프로젝트 버전별 변경사항           |
 | CODE_OF_CONDUCT.md| 기여자의 행동강령            |
 | CONTRIBUTING.md| 기여 절차 및 방법           |
-| LICENSE.dependencies.md| 프로젝트 의존성 라이브러리에 대한 라이선스            |
+| LICENSE-dependencies.md| 프로젝트 의존성 라이브러리에 대한 라이선스            |
 | MAINTAINERS.md          | 유지관리 가이드              |
 | RELEASE-PROCESS.md      | 릴리즈 절차                                |
 | SECURITY.md| 보안취약점 보고 및 보안정책            | 
+
+## 빌드 방법
+: 본 SDK 프로젝트의 build.gradle 파일을 기반으로 JAR 파일을 생성한다.
+1. 프로젝트의 `build.gradle` 파일을 열고 아래와 같은 구성파일의 태스크를 추가한다.
+
+```groovy
+plugins {
+    id 'java'
+}
+
+group = 'org.omnione.did'
+
+java {
+    sourceCompatibility = '17'
+}
+
+jar {
+    archiveBaseName.set('did-crypto-sdk-server') 
+    archiveVersion.set('1.0.0')
+    archiveClassifier.set('') 
+}
+
+repositories {
+    mavenCentral()    
+}
+
+dependencies {
+    implementation 'org.bouncycastle:bcprov-jdk18on:1.78.1'
+}
+```
+
+2. IDE에서 `Gradle` 창을 열고, 프로젝트의 `Tasks > build > clean & build` 태스크를 실행 또는 `./gradlew clean & build` 를 터미널 창에 입력한다.
+3. 실행이 완료되면 `{projetPath}/build/libs/` 폴더에 `did-crypto-sdk-server-1.0.0.jar` 파일이 생성된다.
+
+<br>
 
 ## 라이브러리
 
