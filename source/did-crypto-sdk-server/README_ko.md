@@ -7,7 +7,7 @@ Open DID에 필요한 암복호화를 Crypto, Degest, MultiBase, Signature Utils
 | 구분 | 내용                |
 |------|----------------------------|
 | Language  | Java 17|
-| Build System  | Gradle 8.7 |
+| Build System  | Gradle 8.8 |
 
 <br>
 

@@ -7,7 +7,7 @@ It provides the necessary decryption functions for Open DID as Crypto, Degest, M
 | Component | Requirement     |
 |------|----------------------------|
 | Language  | Java 17|
-| Build System  | Gradle 8.7 |
+| Build System  | Gradle 8.8 |
 
 <br>
 
