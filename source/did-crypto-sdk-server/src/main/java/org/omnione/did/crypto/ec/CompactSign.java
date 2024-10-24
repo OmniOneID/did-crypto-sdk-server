@@ -155,7 +155,7 @@ public class CompactSign {
                 if (Arrays.equals(publicKey, pointQ.getEncoded(true))) {
                     return (byte) recoveryId;
                 }
-            } catch (Exception e) {
+            } catch (RuntimeException e) {
                 throw new CryptoException(CryptoErrorCode.ERR_CODE_SIGNATUREUTIL_INVALID_RECOVERY_ID, e.getMessage());
             }
         }
@@ -264,7 +264,7 @@ public class CompactSign {
             BigInteger pointEInvRInv = pointRInv.multiply(pointEInv).mod(pointN);
             ECPoint pointQ = ECAlgorithms.sumOfTwoMultiplies(spec.getG(), pointEInvRInv, pointR, srInv);
             return pointQ.getEncoded(true);
-        } catch (Exception e) {
+        } catch (RuntimeException e) {
             throw new CryptoException(CryptoErrorCode.ERR_CODE_SIGNATUREUTIL_PUBLIC_KEY_RECOVERY_FAIL, e.getMessage());
         }
     }

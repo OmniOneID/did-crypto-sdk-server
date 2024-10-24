@@ -22,6 +22,7 @@ public enum CryptoErrorCode implements CryptoErrorCodeInterface{
     ERR_CODE_CRYPTOUTIL_GEN_SECRET_FAIL(ERR_CODE_CRYPTOUTIL_BASE,               "004",   "Failed to generate shared secret"),
     ERR_CODE_CRYPTOUTIL_INVALID_CIPHER_INFO_TYPE(ERR_CODE_CRYPTOUTIL_BASE,      "005",   "Cipher type is invalid"),
     ERR_CODE_CRYPTOUTIL_ENCDEC_FAIL(ERR_CODE_CRYPTOUTIL_BASE,                   "006",   "Failed to Encrypt, Decrypt"),  
+    ERR_CODE_CRYPTOUTIL_CONVERT_RSA_KEY_FAIL(ERR_CODE_CRYPTOUTIL_BASE,          "007",   "Failed to convert Rsa Key"),
     
     ERR_CODE_MULTIBASEUTIL_BASE(ERR_CODE_CRYPTO_SDK_BASE, "03", ""),
     ERR_CODE_MULTIBASEUTIL_INVALID_ENCODING_TYPE(ERR_CODE_MULTIBASEUTIL_BASE,   "000", "Multibase encoding type is invalid"),

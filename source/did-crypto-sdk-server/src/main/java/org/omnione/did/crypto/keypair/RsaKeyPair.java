@@ -5,12 +5,16 @@
 package org.omnione.did.crypto.keypair;
 
 import java.security.KeyFactory;
+import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
 import java.security.PublicKey;
+import java.security.spec.InvalidKeySpecException;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 
 import org.omnione.did.crypto.constant.CryptoConstant;
+import org.omnione.did.crypto.exception.CryptoErrorCode;
+import org.omnione.did.crypto.exception.CryptoException;
 
 public class RsaKeyPair implements KeyPairInterface{
 
@@ -41,28 +45,28 @@ public class RsaKeyPair implements KeyPairInterface{
     this.privateKey = privateKey;
   }
 
-  public PublicKey getPublicKey(byte[] publicKey) {
+  public PublicKey getPublicKey(byte[] publicKey) throws CryptoException {
 
     KeyFactory keyFactory = null;
     PublicKey pubKey = null;
+    X509EncodedKeySpec ukeySpec = new X509EncodedKeySpec(publicKey);
     try {
-      X509EncodedKeySpec ukeySpec = new X509EncodedKeySpec(publicKey);
-      keyFactory = KeyFactory.getInstance(CryptoConstant.ALG_RSA);
-      pubKey = keyFactory.generatePublic(ukeySpec);
-    } catch (Exception e) {
-      e.printStackTrace();
+        keyFactory = KeyFactory.getInstance(CryptoConstant.ALG_RSA);
+        pubKey = keyFactory.generatePublic(ukeySpec);
+    } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
+        throw new CryptoException(CryptoErrorCode.ERR_CODE_CRYPTOUTIL_CONVERT_RSA_KEY_FAIL, e.getMessage());
     }
     return pubKey;
   }
 
-  public PrivateKey getPrivateKey(byte[] decPrivKey){
+  public PrivateKey getPrivateKey(byte[] decPrivKey) throws CryptoException {
     PrivateKey privateKey = null;
     try{
       PKCS8EncodedKeySpec rkeySpec = new PKCS8EncodedKeySpec(decPrivKey);
       KeyFactory rkeyFactory = KeyFactory.getInstance(CryptoConstant.ALG_RSA);                     
       privateKey = rkeyFactory.generatePrivate(rkeySpec);
-    } catch (Exception e) {
-      e.printStackTrace();
+    } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
+        throw new CryptoException(CryptoErrorCode.ERR_CODE_CRYPTOUTIL_CONVERT_RSA_KEY_FAIL, e.getMessage());
     }
     return privateKey;
   }
