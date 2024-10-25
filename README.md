@@ -9,6 +9,7 @@ did-crypto-sdk-server
 ├── CLA.md
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
+├── LICENSE
 ├── LICENSE-dependencies.md
 ├── MAINTAINERS.md
 ├── README.md
@@ -45,6 +46,7 @@ did-crypto-sdk-server
 | CHANGELOG.md            | Version-specific changes in the project         |
 | CODE_OF_CONDUCT.md      | Code of conduct for contributors                |
 | CONTRIBUTING.md         | Contribution guidelines and procedures          |
+| LICENSE                 | Apache 2.0                                      |
 | LICENSE-dependencies.md | Licenses for the project’s dependency libraries |
 | MAINTAINERS.md          | General guidelines for maintaining              |
 | RELEASE-PROCESS.md      | Release process                                 |
@@ -87,7 +89,7 @@ dependencies {
 
 ## Libraries
 
-Libraries can be found in the [build folder](did-crypto-sdk-server/source/did-crypto-sdk-server/build/libs).
+Libraries can be found in the [build folder](/source/release).
 
 
 1. Copy the did-crypto-sdk-server-1.0.0.jar file to the libs of the server project.

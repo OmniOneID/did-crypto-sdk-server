@@ -9,6 +9,7 @@ did-crypto-sdk-server
 ├── CLA.md
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
+├── LICENSE
 ├── LICENSE-dependencies.md
 ├── MAINTAINERS.md
 ├── README.md
@@ -45,6 +46,7 @@ did-crypto-sdk-server
 | CHANGELOG.md| 프로젝트 버전별 변경사항           |
 | CODE_OF_CONDUCT.md| 기여자의 행동강령            |
 | CONTRIBUTING.md| 기여 절차 및 방법           |
+| LICENSE                 | Apache 2.0                                      |
 | LICENSE-dependencies.md| 프로젝트 의존성 라이브러리에 대한 라이선스            |
 | MAINTAINERS.md          | 유지관리 가이드              |
 | RELEASE-PROCESS.md      | 릴리즈 절차                                |
@@ -87,7 +89,7 @@ dependencies {
 
 ## 라이브러리
 
-라이브러리는 [build 폴더](did-crypto-sdk-server/source/did-crypto-sdk-server/build/libs)에서 찾을 수 있습니다.
+라이브러리는 [build 폴더](/source/release)에서 찾을 수 있습니다.
 
 1. 서버 프로젝트의 libs에 did-crypto-sdk-server-1.0.0.jar 파일을 복사한다.
 2. 서버 프로젝트의 build gradle에 아래 의존성을 추가한다.
