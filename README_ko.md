@@ -22,18 +22,20 @@ did-crypto-sdk-server
 │       ├── CRYPTO_SDK_SERVER_API_ko.md
 │       └── CryptoSDKError.md
 └── source
-    └── did-crypto-sdk-server
-        ├── README.md
-        ├── README_ko.md
-        ├── build.gradle
-        ├── gradle
-        │    └── wrapper
-        ├── .gitignore
-        ├── build
-        ├── gradlew        
-        ├── gradlew.bat
-        ├── settings.gradle
-        └── src
+    ├── did-crypto-sdk-server
+    │   ├── README.md
+    │   ├── README_ko.md
+    │   ├── build.gradle
+    │   ├── gradle
+    │   │   └── wrapper
+    │   ├── .gitignore
+    │   ├── build
+    │   ├── gradlew        
+    │   ├── gradlew.bat
+    │   ├── settings.gradle
+    │   └── src
+    └── release
+        └── did-crypto-sdk-server-1.0.0.jar
 ```
 
 |  이름 |         역할                    |
@@ -91,6 +93,7 @@ dependencies {
 
 라이브러리는 [build 폴더](/source/release)에서 찾을 수 있습니다.
 
+## Core SDK
 1. 서버 프로젝트의 libs에 did-crypto-sdk-server-1.0.0.jar 파일을 복사한다.
 2. 서버 프로젝트의 build gradle에 아래 의존성을 추가한다.
 
@@ -109,5 +112,5 @@ API 참조는 [여기](docs/CRYPTO_SDK-SERVER_API_ko.md)에서 확인할 수 있
 Contributing 및 pull request 제출 절차에 대한 자세한 내용은 [CONTRIBUTING.md](CONTRIBUTING.md)와 [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) 를 참조하세요.
 
 ## 라이선스
-Copyright 2024 Raonsecure
+[Apache 2.0](LICENSE)
 

@@ -22,18 +22,20 @@ did-crypto-sdk-server
 │       ├── CRYPTO_SDK_SERVER_API_ko.md
 │       └── CryptoSDKError.md
 └── source
-    └── did-crypto-sdk-server
-        ├── README.md
-        ├── README_ko.md
-        ├── build.gradle
-        ├── gradle
-        │   └── wrapper
-        ├── .gitignore
-        ├── build
-        ├── gradlew        
-        ├── gradlew.bat
-        ├── settings.gradle
-        └── src
+    ├── did-crypto-sdk-server
+    │   ├── README.md
+    │   ├── README_ko.md
+    │   ├── build.gradle
+    │   ├── gradle
+    │   │   └── wrapper
+    │   ├── .gitignore
+    │   ├── build
+    │   ├── gradlew        
+    │   ├── gradlew.bat
+    │   ├── settings.gradle
+    │   └── src
+    └── release
+        └── did-crypto-sdk-server-1.0.0.jar
 ```
 
 | Name                    | Description                                     |
@@ -91,7 +93,7 @@ dependencies {
 
 Libraries can be found in the [build folder](/source/release).
 
-
+## Crypto SDK
 1. Copy the did-crypto-sdk-server-1.0.0.jar file to the libs of the server project.
 2. Add the following dependencies to the server project's build.gradle.
 
@@ -112,4 +114,4 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_
 
 
 ## License
-Copyright 2024 Raonsecure
+[Apache 2.0](LICENSE)
