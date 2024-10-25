@@ -13,7 +13,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: source/did-crypro-sdk-server
+        working-directory: source/did-crypto-sdk-server
 
     steps:
     - uses: actions/checkout@v4
@@ -25,6 +25,4 @@ jobs:
         distribution: 'temurin'
 
     - name: Build Server SDK with Gradle
-      uses: gradle/gradle-build-action@v2
-      with:
-        arguments: clean build
+      run: gradle clean build
