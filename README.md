@@ -9,6 +9,7 @@ did-crypto-sdk-server
 ├── CLA.md
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
+├── LICENSE
 ├── LICENSE-dependencies.md
 ├── MAINTAINERS.md
 ├── README.md
@@ -21,18 +22,20 @@ did-crypto-sdk-server
 │       ├── CRYPTO_SDK_SERVER_API_ko.md
 │       └── CryptoSDKError.md
 └── source
-    └── did-crypto-sdk-server
-        ├── README.md
-        ├── README_ko.md
-        ├── build.gradle
-        ├── gradle
-        │   └── wrapper
-        ├── .gitignore
-        ├── build
-        ├── gradlew        
-        ├── gradlew.bat
-        ├── settings.gradle
-        └── src
+    ├── did-crypto-sdk-server
+    │   ├── README.md
+    │   ├── README_ko.md
+    │   ├── build.gradle
+    │   ├── gradle
+    │   │   └── wrapper
+    │   ├── .gitignore
+    │   ├── build
+    │   ├── gradlew        
+    │   ├── gradlew.bat
+    │   ├── settings.gradle
+    │   └── src
+    └── release
+        └── did-crypto-sdk-server-1.0.0.jar
 ```
 
 | Name                    | Description                                     |
@@ -45,6 +48,7 @@ did-crypto-sdk-server
 | CHANGELOG.md            | Version-specific changes in the project         |
 | CODE_OF_CONDUCT.md      | Code of conduct for contributors                |
 | CONTRIBUTING.md         | Contribution guidelines and procedures          |
+| LICENSE                 | Apache 2.0                                      |
 | LICENSE-dependencies.md | Licenses for the project’s dependency libraries |
 | MAINTAINERS.md          | General guidelines for maintaining              |
 | RELEASE-PROCESS.md      | Release process                                 |
@@ -87,9 +91,9 @@ dependencies {
 
 ## Libraries
 
-Libraries can be found in the [build folder](did-crypto-sdk-server/source/did-crypto-sdk-server/build/libs).
+Libraries can be found in the [Releases](https://github.com/OmniOneID/did-crypto-sdk-server/releases).
 
-
+## Crypto SDK
 1. Copy the did-crypto-sdk-server-1.0.0.jar file to the libs of the server project.
 2. Add the following dependencies to the server project's build.gradle.
 
@@ -110,4 +114,4 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](CODE_OF_
 
 
 ## License
-Copyright 2024 Raonsecure
+[Apache 2.0](LICENSE)

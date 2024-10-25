@@ -1,7 +1,18 @@
-/* 
- * Copyright 2024 Raonsecure
+/*
+ * Copyright 2024 OmniOne.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
-
 package org.omnione.did.crypto.exception;
 
 public enum CryptoErrorCode implements CryptoErrorCodeInterface{
@@ -22,6 +33,7 @@ public enum CryptoErrorCode implements CryptoErrorCodeInterface{
     ERR_CODE_CRYPTOUTIL_GEN_SECRET_FAIL(ERR_CODE_CRYPTOUTIL_BASE,               "004",   "Failed to generate shared secret"),
     ERR_CODE_CRYPTOUTIL_INVALID_CIPHER_INFO_TYPE(ERR_CODE_CRYPTOUTIL_BASE,      "005",   "Cipher type is invalid"),
     ERR_CODE_CRYPTOUTIL_ENCDEC_FAIL(ERR_CODE_CRYPTOUTIL_BASE,                   "006",   "Failed to Encrypt, Decrypt"),  
+    ERR_CODE_CRYPTOUTIL_CONVERT_RSA_KEY_FAIL(ERR_CODE_CRYPTOUTIL_BASE,          "007",   "Failed to convert Rsa Key"),
     
     ERR_CODE_MULTIBASEUTIL_BASE(ERR_CODE_CRYPTO_SDK_BASE, "03", ""),
     ERR_CODE_MULTIBASEUTIL_INVALID_ENCODING_TYPE(ERR_CODE_MULTIBASEUTIL_BASE,   "000", "Multibase encoding type is invalid"),
