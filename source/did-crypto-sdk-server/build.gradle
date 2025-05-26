@@ -5,12 +5,12 @@ plugins {
 group = 'org.omnione.did'
 
 java {
-	sourceCompatibility = '17'
+	sourceCompatibility = '21'
 }
 
 jar {
     archiveBaseName.set('did-crypto-sdk-server')
-    archiveVersion.set('1.0.0')
+    archiveVersion.set('2.0.0')
     archiveClassifier.set('') 
 }
 
