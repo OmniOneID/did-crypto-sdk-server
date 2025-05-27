@@ -35,7 +35,7 @@ did-crypto-sdk-server
     │   ├── settings.gradle
     │   └── src
     └── release
-        └── did-crypto-sdk-server-1.0.0.jar
+        └── did-crypto-sdk-server-2.0.0.jar
 ```
 
 | Name                    | Description                                     |
@@ -66,12 +66,12 @@ plugins {
 group = 'org.omnione.did'
 
 java {
-    sourceCompatibility = '17'
+    sourceCompatibility = '21'
 }
 
 jar {
     archiveBaseName.set('did-crypto-sdk-server') 
-    archiveVersion.set('1.0.0')
+    archiveVersion.set('2.0.0')
     archiveClassifier.set('') 
 }
 
@@ -85,7 +85,7 @@ dependencies {
 ```
 
 2. Open the `Gradle` tab in IDE and run the project's `Task > Build > Clean and Build` task, or type `./gradlew clean & build` in a terminal.
-3. Once the execution is complete, the `did-crypto-sdk-server-1.0.0.jar` file will be generated in the `{projetPath}/build/libs/` folder.
+3. Once the execution is complete, the `did-crypto-sdk-server-2.0.0.jar` file will be generated in the `{projetPath}/build/libs/` folder.
 
 <br>
 
@@ -94,12 +94,12 @@ dependencies {
 Libraries can be found in the [Releases](https://github.com/OmniOneID/did-crypto-sdk-server/releases).
 
 ## Crypto SDK
-1. Copy the did-crypto-sdk-server-1.0.0.jar file to the libs of the server project.
+1. Copy the did-crypto-sdk-server-2.0.0.jar file to the libs of the server project.
 2. Add the following dependencies to the server project's build.gradle.
 
 ```groovy
     implementation 'org.bouncycastle:bcprov-jdk18on:1.78.1'  
-    implementation files('libs/did-crypto-sdk-server-1.0.0.jar')
+    implementation files('libs/did-crypto-sdk-server-2.0.0.jar')
 ```
 3. Sync `Gradle` to ensure the dependencies are properly added.
 

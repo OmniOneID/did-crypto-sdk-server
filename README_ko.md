@@ -35,7 +35,7 @@ did-crypto-sdk-server
     │   ├── settings.gradle
     │   └── src
     └── release
-        └── did-crypto-sdk-server-1.0.0.jar
+        └── did-crypto-sdk-server-2.0.0.jar
 ```
 
 |  이름 |         역할                    |
@@ -66,12 +66,12 @@ plugins {
 group = 'org.omnione.did'
 
 java {
-    sourceCompatibility = '17'
+    sourceCompatibility = '21'
 }
 
 jar {
     archiveBaseName.set('did-crypto-sdk-server') 
-    archiveVersion.set('1.0.0')
+    archiveVersion.set('2.0.0')
     archiveClassifier.set('') 
 }
 
@@ -85,7 +85,7 @@ dependencies {
 ```
 
 2. IDE에서 `Gradle` 창을 열고, 프로젝트의 `Tasks > build > clean & build` 태스크를 실행 또는 `./gradlew clean & build` 를 터미널 창에 입력한다.
-3. 실행이 완료되면 `{projetPath}/build/libs/` 폴더에 `did-crypto-sdk-server-1.0.0.jar` 파일이 생성된다.
+3. 실행이 완료되면 `{projetPath}/build/libs/` 폴더에 `did-crypto-sdk-server-2.0.0.jar` 파일이 생성된다.
 
 <br>
 
@@ -94,12 +94,12 @@ dependencies {
 라이브러리는 [Releases](https://github.com/OmniOneID/did-crypto-sdk-server/releases) 에서 찾을 수 있습니다.
 
 ## Core SDK
-1. 서버 프로젝트의 libs에 did-crypto-sdk-server-1.0.0.jar 파일을 복사한다.
+1. 서버 프로젝트의 libs에 did-crypto-sdk-server-2.0.0.jar 파일을 복사한다.
 2. 서버 프로젝트의 build gradle에 아래 의존성을 추가한다.
 
 ```groovy
     implementation 'org.bouncycastle:bcprov-jdk18on:1.78.1' 
-    implementation files('libs/did-crypto-sdk-server-1.0.0.jar')
+    implementation files('libs/did-crypto-sdk-server-2.0.0.jar')
 ```
 3. `Gradle`을 동기화하여 의존성이 제대로 추가되었는지 확인한다.
 

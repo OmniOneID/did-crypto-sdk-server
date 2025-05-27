@@ -6,7 +6,7 @@ It provides the necessary decryption functions for Open DID as Crypto, Degest, M
 ## S/W Specifications
 | Component | Requirement     |
 |------|----------------------------|
-| Language  | Java 17|
+| Language  | Java 21|
 | Build System  | Gradle 8.8 |
 
 <br>
@@ -23,12 +23,12 @@ plugins {
 group = 'org.omnione.did'
 
 java {
-    sourceCompatibility = '17'
+    sourceCompatibility = '21'
 }
 
 jar {
     archiveBaseName.set('did-crypto-sdk-server') 
-    archiveVersion.set('1.0.0')
+    archiveVersion.set('2.0.0')
     archiveClassifier.set('') 
 }
 
@@ -42,16 +42,16 @@ dependencies {
 ```
 
 2. Open the `Gradle` tab in IDE and run the project's `Task > Build > Clean and Build` task, or type `./gradlew clean & build` in a terminal.
-3. Once the execution is complete, the `did-crypto-sdk-server-1.0.0.jar` file will be generated in the `{projetPath}/build/libs/` folder.
+3. Once the execution is complete, the `did-crypto-sdk-server-2.0.0.jar` file will be generated in the `{projetPath}/build/libs/` folder.
 
 <br>
 
 ## SDK Application Method
-1. Copy the `did-crypto-sdk-server-1.0.0.jar` file to the libs of the server project.
+1. Copy the `did-crypto-sdk-server-2.0.0.jar` file to the libs of the server project.
 2. Add the following dependencies to the `build.gradle` of the server project.
 
 ```groovy
-    implementation files('libs/did-crypto-sdk-server-1.0.0.jar')
+    implementation files('libs/did-crypto-sdk-server-2.0.0.jar')
     implementation 'org.bouncycastle:bcprov-jdk18on:1.78.1'
 ```
 3. Sync `Gradle` to ensure the dependencies are properly added.
