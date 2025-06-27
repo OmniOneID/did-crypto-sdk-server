@@ -10,7 +10,7 @@ did-crypto-sdk-server
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
 ├── LICENSE
-├── LICENSE-dependencies.md
+├── dependencies-license.md
 ├── MAINTAINERS.md
 ├── README.md
 ├── README_ko.md
@@ -35,7 +35,7 @@ did-crypto-sdk-server
     │   ├── settings.gradle
     │   └── src
     └── release
-        └── did-crypto-sdk-server-1.0.0.jar
+        └── did-crypto-sdk-server-2.0.0.jar
 ```
 
 | Name                    | Description                                     |
@@ -49,7 +49,7 @@ did-crypto-sdk-server
 | CODE_OF_CONDUCT.md      | Code of conduct for contributors                |
 | CONTRIBUTING.md         | Contribution guidelines and procedures          |
 | LICENSE                 | Apache 2.0                                      |
-| LICENSE-dependencies.md | Licenses for the project’s dependency libraries |
+| dependencies-license.md | Licenses for the project’s dependency libraries |
 | MAINTAINERS.md          | General guidelines for maintaining              |
 | RELEASE-PROCESS.md      | Release process                                 |
 | SECURITY.md             | Security policies and vulnerability reporting   |
@@ -66,12 +66,12 @@ plugins {
 group = 'org.omnione.did'
 
 java {
-    sourceCompatibility = '17'
+    sourceCompatibility = '21'
 }
 
 jar {
     archiveBaseName.set('did-crypto-sdk-server') 
-    archiveVersion.set('1.0.0')
+    archiveVersion.set('2.0.0')
     archiveClassifier.set('') 
 }
 
@@ -85,7 +85,7 @@ dependencies {
 ```
 
 2. Open the `Gradle` tab in IDE and run the project's `Task > Build > Clean and Build` task, or type `./gradlew clean & build` in a terminal.
-3. Once the execution is complete, the `did-crypto-sdk-server-1.0.0.jar` file will be generated in the `{projetPath}/build/libs/` folder.
+3. Once the execution is complete, the `did-crypto-sdk-server-2.0.0.jar` file will be generated in the `{projetPath}/build/libs/` folder.
 
 <br>
 
@@ -94,12 +94,12 @@ dependencies {
 Libraries can be found in the [Releases](https://github.com/OmniOneID/did-crypto-sdk-server/releases).
 
 ## Crypto SDK
-1. Copy the did-crypto-sdk-server-1.0.0.jar file to the libs of the server project.
+1. Copy the did-crypto-sdk-server-2.0.0.jar file to the libs of the server project.
 2. Add the following dependencies to the server project's build.gradle.
 
 ```groovy
     implementation 'org.bouncycastle:bcprov-jdk18on:1.78.1'  
-    implementation files('libs/did-crypto-sdk-server-1.0.0.jar')
+    implementation files('libs/did-crypto-sdk-server-2.0.0.jar')
 ```
 3. Sync `Gradle` to ensure the dependencies are properly added.
 
@@ -107,6 +107,15 @@ Libraries can be found in the [Releases](https://github.com/OmniOneID/did-crypto
 
 API Reference can be found [here](docs/CRYPTO_SDK-SERVER_API.md)
 
+## Change Log
+
+The Change Log provides a detailed record of version-specific changes and updates. You can find it here:
+- [Change Log](./CHANGELOG.md)
+
+## OpenDID Demonstration Videos <br>
+To watch our demonstration videos of the OpenDID system in action, please visit our [Demo Repository](https://github.com/OmniOneID/did-demo-server). <br>
+
+These videos showcase key features including user registration, VC issuance, and VP submission processes.
 
 ## Contributing
 
