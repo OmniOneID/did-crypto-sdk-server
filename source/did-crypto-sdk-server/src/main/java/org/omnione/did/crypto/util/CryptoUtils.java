@@ -16,7 +16,6 @@
 
 package org.omnione.did.crypto.util;
 
-import java.math.BigInteger;
 import java.security.InvalidKeyException;
 import java.security.KeyFactory;
 import java.security.NoSuchAlgorithmException;
@@ -27,7 +26,6 @@ import java.security.interfaces.ECPublicKey;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
-import java.util.Arrays;
 
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
@@ -208,15 +206,9 @@ public class CryptoUtils {
       throw new CryptoException(CryptoErrorCode.ERR_CODE_CRYPTOUTIL_GEN_SECRET_FAIL, "Infinity is not a valid agreement value for ECDH");
     }
 
-    BigInteger bitInt = P.getAffineXCoord().toBigInteger();
-    
-    byte[] sharedSecret = bitInt.toByteArray();
-    
-    if (sharedSecret[0] == 0) {
-        sharedSecret = Arrays.copyOfRange(sharedSecret, 1, sharedSecret.length);
-    }
-
-    return sharedSecret;
+    // Encode the X coordinate at the curve's field size (32 bytes for P-256 and secp256k1).
+    // BigInteger.toByteArray() drops leading zero bytes, which gave a 31-byte secret about once in 256 key pairs.
+    return P.getAffineXCoord().getEncoded();
   }
   
   /**
