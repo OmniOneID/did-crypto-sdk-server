@@ -1,5 +1,12 @@
 # Changelog
 
+## [Unreleased] (v3.0.0)
+
+### 🐛 Bug Fixes
+
+- ECDH Shared Secret Length
+    - `CryptoUtils.generateSharedSecret` now always returns the field-size (32-byte) X coordinate; a leading 0x00 was dropped before, so about 1 in 256 secrets were 31 bytes
+
 ## v2.0.0 (2025-05-26)
 
 ### 🚀 New Features

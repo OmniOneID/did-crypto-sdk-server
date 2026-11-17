@@ -10,7 +10,7 @@ java {
 
 jar {
     archiveBaseName.set('did-crypto-sdk-server')
-    archiveVersion.set('2.0.0')
+    archiveVersion.set('3.0.0')
     archiveClassifier.set('') 
 }
 
